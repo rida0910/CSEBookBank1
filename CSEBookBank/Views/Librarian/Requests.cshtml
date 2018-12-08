@@ -1,0 +1,24 @@
+﻿@model IEnumerable<CSEBookBank.Models.Request>
+
+@{
+    ViewBag.Title = "Requests";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Requests</h2>
+
+<table class="table">
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RqstMessage)
+        </td>
+        <td>
+            @Html.ActionLink("Accept", "Accept", new { id = item.BookID })
+            @Html.ActionLink("Deny", "Deny", new { id = item.BookID })
+        </td>
+    </tr>
+}
+
+</table>

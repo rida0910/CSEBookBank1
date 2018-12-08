@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CSEBookBankDbModelStoreContainer" CdmEntityContainer="CSEBookBankDbEntities">
+    <EntitySetMapping Name="Books">
+      <EntityTypeMapping TypeName="CSEBookBankDbModel.Book">
+        <MappingFragment StoreEntitySet="Book">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="Edition" ColumnName="Edition" />
+          <ScalarProperty Name="BookID" ColumnName="BookID" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IssuedTo" ColumnName="IssuedTo" />
+          <ScalarProperty Name="IssuedDate" ColumnName="IssuedDate" />
+          <ScalarProperty Name="ReturnDate" ColumnName="ReturnDate" />
+          <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Librarians">
+      <EntityTypeMapping TypeName="CSEBookBankDbModel.Librarian">
+        <MappingFragment StoreEntitySet="Librarian">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="students">
+      <EntityTypeMapping TypeName="CSEBookBankDbModel.student">
+        <MappingFragment StoreEntitySet="student">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+          <ScalarProperty Name="RegistrationNo" ColumnName="RegistrationNo" />
+          <ScalarProperty Name="Fine" ColumnName="Fine" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notifications">
+      <EntityTypeMapping TypeName="CSEBookBankDbModel.Notification">
+        <MappingFragment StoreEntitySet="Notification">
+          <ScalarProperty Name="NotMessage" ColumnName="NotMessage" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="BookID" ColumnName="BookID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Requests">
+      <EntityTypeMapping TypeName="CSEBookBankDbModel.Request">
+        <MappingFragment StoreEntitySet="Request">
+          <ScalarProperty Name="RqstMessage" ColumnName="RqstMessage" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="BookID" ColumnName="BookID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MyRoles">
+      <EntityTypeMapping TypeName="CSEBookBankDbModel.MyRole">
+        <MappingFragment StoreEntitySet="MyRoles">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
