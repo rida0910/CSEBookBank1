@@ -1,0 +1,22 @@
+﻿@model CSEBookBank.Models.Book
+@{
+    ViewBag.Title = "Accept";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+@if (Model.IssuedTo == null)
+{
+    <div class="alert alert-info" style="Text-align:center">
+        Book issued!
+    </div>
+}
+
+else
+{
+    <div class="alert alert-info" style="Text-align:center">
+        Book returned!
+    </div>
+}
+
+<hr />
+@Html.ActionLink("Back to Requests", "Requests")
